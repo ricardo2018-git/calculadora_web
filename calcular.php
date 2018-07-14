@@ -1,6 +1,6 @@
 <?php
 
-	require_once 'classe/calculadora.php';
+	require_once 'classes/Calculadora.php';
 	
 	$num1     = $_POST['num1'];
 	$num2     = $_POST['num2'];
@@ -8,8 +8,34 @@
 	
 	$calculadora = new Calculadora();
 	
-	//Setar valores
-	$calculadora -> setNum1($num1);
-	$calculadora -> setNum2($num2);
-
+	//Seta valores
+	
+		$calculadora -> setNum1($num1);
+		$calculadora -> setNum2($num2);
+		
+	// -----FIM -----
+	
+	//Operação escolhida
+	
+		switch($operacao){
+			case 'somar':
+				$calculadora -> somar();
+				break;
+				
+			case 'subtrair':
+				$calculadora -> subtrair();
+				break;
+				
+			case 'multiplicar':
+				$calculadora -> multiplicar();
+				break;
+				
+			case 'dividir':
+				$calculadora -> dividir();
+				break;
+		}
+		
+	// -----FIM -----
+	echo $calculadora -> getTotal();
+	
 ?>

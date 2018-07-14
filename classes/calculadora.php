@@ -13,16 +13,41 @@
 			$this -> num2  = 0;
 		}
 		
-		public function setNum1($parametro_num1){
+		//Seta os valores na variaveis
+			public function setNum1($parametro_num1){
+				
+				$this -> num1 = $parametro_num1;
+			}
 			
-			$this -> num1 = $parametro_num1;
-		}
+			public function setNum2($parametro_num2){
+				
+				$this -> num2 = $parametro_num2;
+			}
+		// ----- FIM -----
 		
-		public function setNum2($parametro_num2){
+		//Operações
 			
-			$this -> num2 = $parametro_num2;
-		}
+			public function somar(){
+				$this -> total = $this -> num1 + $this -> num2;
+			}
+			
+			public function subtrair(){
+				$this -> total = $this -> num1 - $this -> num2;
+			}
+			
+			public function multiplicar(){
+				$this -> total = $this -> num1 * $this -> num2;
+			}
+			
+			public function dividir(){
+				$this -> total = $this -> num1 / $this -> num2;
+			}
+			
+		// ----- FIM -----
 		
+		public function getTotal(){
+			return $this -> total;
+		}
 	}
 
 ?>
