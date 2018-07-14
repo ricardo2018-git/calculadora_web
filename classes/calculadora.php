@@ -20,7 +20,7 @@
 		
 		public function setNum2($parametro_num2){
 			
-			$this - num2 = $parametro_num2;
+			$this -> num2 = $parametro_num2;
 		}
 		
 	}
